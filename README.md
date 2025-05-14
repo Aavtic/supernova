@@ -7,6 +7,11 @@ content with minimal boilerplate.
 This is a personal project that I use to build my static pages. So this is customized to my usecases.
 
 
+> [!WARNING]  
+> Lexer under construction.
+
+
+
 ## SUPDOWN
 
 ### SUPDOWN rules
