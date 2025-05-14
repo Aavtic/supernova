@@ -1,0 +1,14 @@
+@sub_title {PROJECT NAME}
+@title {Ass Parser}
+
+@enclose {
+@sub_title {WHAT IT IS}
+@description {
+ ass_parser is a Rust crate I built to make working with .ass subtitle files a lot easier. If you've ever messed around with subtitles that need fancy formatting, precise positioning, or anime-style effects, you've probably seen this file type. With AssParser, you can read, write, and tweak these files however you like no fuss. It's designed to be clean, straightforward, and Rustacean-friendly. 
+}
+}
+
+@sub_title {WHY I BUILT IT}
+@description {
+ I have worked with .ass files before in Rust and found that there aren't many libraries that did what I wanted (Read and Modify .ass files), Convert a .srt (SubRip Subtitle File) to a .ass file. Plus most of them are not maintained. So I decided to build my own parser in Rust that makes it easy to create, modify, convert and understand these files without the headacheIt was a fun way to dive deep into parsing world and also contributing to the community.
+}
