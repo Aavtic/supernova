@@ -1,5 +1,9 @@
 # SUPERNOVA - a static webpage generator 
 
+Supernova is a lightweight, fast HTML generator powered by a custom domain-specific 
+language (DSL). Designed for creators and developers, it lets you write clean, structured
+content with minimal boilerplate. 
+
 This is a personal project that I use to build my static pages. So this is customized to my usecases.
 
 
