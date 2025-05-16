@@ -12,14 +12,6 @@ This is a personal project that I use to build my static pages. So this is custo
 
 
 
-## SUPDOWN
-
-### SUPDOWN rules
-
-1.page-structure starts with '@'
-2.
-
-
 ### SUPERDOWN STRUCTURES
 
 1. @(props)  sub_title
