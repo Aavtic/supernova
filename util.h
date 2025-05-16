@@ -11,6 +11,13 @@
         } while (0)                                                               \
 
 
+#define UNREACHABLE(...)\
+        do {                                                                      \
+            printf("%s:%d UNREACHABLE: %s\n", __FILE__, __LINE__, __VA_ARGS__); \
+            exit(1);                                                              \
+        } while (0)                                                               \
+
+
 #define UNUSED(x) (void) (x)
 
 #endif // UTIL_H_

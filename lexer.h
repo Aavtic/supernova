@@ -8,6 +8,8 @@ typedef enum {
     TOKEN_INVALID,
     TOKEN_DEFINER,
     TOKEN_VALUE,
+    TOKEN_CURLY_OPEN,
+    TOKEN_CURLY_CLOSE,
 } TokenType;
 
 typedef struct {
