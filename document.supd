@@ -1,14 +1,7 @@
-@sub_title {PROJECT NAME}
-@title {Ass Parser}
+@sub_title {My sub-title}
+@title {my title}
 
 @enclose {
-@sub_title {WHAT IT IS}
-@description {
- ass_parser is a Rust crate I built to make working with .ass subtitle files a lot easier.
+       @sub_title {WHOAMI}
+       @title {Aadish M}
 }
-}
-
-@sub_title {WHY I BUILT IT}
-@description {
- I have worked with .ass files before in Rust and found that there aren't many libraries that did what I wanted (Read and Modify .ass files), Convert a .srt (SubRip Subtitle File) to a .ass file.
- }

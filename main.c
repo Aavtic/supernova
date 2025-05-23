@@ -3,6 +3,8 @@
 #include <string.h>
 
 #include "lexer.h"
+// #include "dyna.h"
+#include "parser.h"
 
 
 char* read_entire_file(char* filename) {  
@@ -34,11 +36,46 @@ int main() {
 
     Lexer l = lexer_new(text, strlen(text));
 
+    // // Dynamic array for tokens;
+    // Dyna tokens = {0};
+    // tokens.start = malloc(DYNA_INITIAL_CAP * sizeof(Token));
+    // tokens.capacity = DYNA_INITIAL_CAP;
+    // tokens.size = sizeof(Token);
+
+    TokenLL *head = NULL;
+    TokenLL *prev = NULL;
+
     Token t = next_token(&l);
     while (t.kind != TOKEN_END) {
-        printf("%.*s: %s\n", (int)t.text_len, t.text, get_token_name(t.kind));
+
+        TokenLL *new_node = (TokenLL*)malloc(sizeof(TokenLL));
+        new_node->value = t;
+
+        if (head == NULL) {
+            head = new_node;
+            prev = new_node;
+        } else {
+            prev->next = new_node;
+            prev = new_node;
+        }
+
         t = next_token(&l);
+        if (t.kind == TOKEN_INVALID) {
+            printf("ERROR: Invalid token");
+            printf("%.*s: %s\n", (int)t.text_len, t.text, get_token_name(t.kind));
+            exit(1);
+        }
     }
+
+    TokenLL *temp = head;
+
+    while (temp != NULL) {
+        t = temp->value;
+        // printf("%.*s: %s\n", (int)t.text_len, t.text, get_token_name(t.kind));
+        temp = temp->next;
+    }
+
+    parse_tokens(head);
 
     return 0;
 }

@@ -20,4 +20,9 @@
 
 #define UNUSED(x) (void) (x)
 
+
+
+char* sized_str_to_str(char* sized_str, size_t n);
+
+
 #endif // UTIL_H_
