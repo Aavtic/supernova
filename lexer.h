@@ -2,7 +2,6 @@
 #define LEXER_H_
 
 #include <stddef.h>
-#include "dyna.h"
 
 typedef enum {
     TOKEN_END = 0,
@@ -20,9 +19,6 @@ typedef struct {
     size_t text_len;
 } Token;
 
-
-// Dynamic array to hold the tokens
-DYNA_INIT(Token) Dyna;
 
 char* get_token_name(TokenType kind);
 
