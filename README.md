@@ -7,11 +7,6 @@ content with minimal boilerplate.
 This is a personal project that I use to build my static pages. So this is customized to my usecases.
 
 
-> [!WARNING]  
-> Lexer under construction.
-
-
-
 ### SUPERDOWN STRUCTURES
 
 1. @(props)  sub_title
