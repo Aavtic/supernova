@@ -28,9 +28,24 @@ char* read_entire_file(char* filename) {
     return buffer;
 }
 
+void print_usage(FILE* file) {
+    char *usage = "USAGE:\n"
+        "./supernova input.supd";
+    fprintf(file, "%s", usage);
+}
 
-int main() {
-    char* file_name = "document.supd";
+
+int main(int argc, char** argv) {
+
+    argc--;
+    argv++;
+
+    if (argc != 1) {
+        print_usage(stderr);
+        return 1;
+    }
+
+    char* file_name = *argv;
     char* text = read_entire_file(file_name);
 
     Lexer l = lexer_new(text, strlen(text));
